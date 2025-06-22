@@ -59,9 +59,9 @@ document_chain = create_stuff_documents_chain(llm, prompt)
 retrieval_chain = create_retrieval_chain(retriever, document_chain)
 
 # Step 8: Invoke the RAG chain with your query
-query = "No, no! The adventures first who said"
+query = "Who is alice"
 response = retrieval_chain.invoke({"input": query})
-
+print(response)
 # Step 9: Display the final answer and retrieved context
 print(f"\n--- Final Answer ---")
 print(response["answer"])
